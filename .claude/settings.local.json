@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:abilar.com)",
+      "Bash(node --version)",
+      "Bash(npx --version)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(mkdir -p /Users/the_kamma/Desktop/RepolarProject/assets)",
+      "Bash(cp \"/Users/the_kamma/Downloads/image.png\" /Users/the_kamma/Desktop/RepolarProject/assets/diabetic-study-cover.png)",
+      "Bash(cp \"/Users/the_kamma/Downloads/Diabetic_wound_and_Abilar_Healing_of_neuropathic_diabetic_foot_ulcers_of_PEDIS_grad_1_2_at_home_care_with_topical_antise.pdf\" \"/Users/the_kamma/Desktop/RepolarProject/assets/diabetic-ulcer-study.pdf\")",
+      "Bash(pdftoppm -r 150 -png -f 1 -l 1 \"/Users/the_kamma/Downloads/Diabetic_wound_and_Abilar_Healing_of_neuropathic_diabetic_foot_ulcers_of_PEDIS_grad_1_2_at_home_care_with_topical_antise.pdf\" /Users/the_kamma/Desktop/RepolarProject/assets/diabetic-cover)",
+      "Bash(find /Users/the_kamma/Desktop /Users/the_kamma/Downloads -name *iabetic* -o -name *Case* -o -name *case*)",
+      "Bash(cp \"/Users/the_kamma/Desktop/Repolar/Screenshots /Diabetic_Case 1.png\" /Users/the_kamma/Desktop/RepolarProject/assets/diabetic-case-1.png)",
+      "Bash(cp \"/Users/the_kamma/Desktop/Repolar/Screenshots /Diabetic_Case 2.png\" /Users/the_kamma/Desktop/RepolarProject/assets/diabetic-case-2.png)",
+      "Bash(cp \"/Users/the_kamma/Desktop/Repolar/Screenshots /Diabetic_Case 3.png\" /Users/the_kamma/Desktop/RepolarProject/assets/diabetic-case-3.png)",
+      "Bash(cp \"/Users/the_kamma/Desktop/Repolar/Screenshots /Diabetic_Case 4.png\" /Users/the_kamma/Desktop/RepolarProject/assets/diabetic-case-4.png)",
+      "WebFetch(domain:monidor.com)",
+      "Bash(xargs ls:*)",
+      "Bash(ls -lt ~/Downloads/*.png ~/Downloads/*.jpg ~/Downloads/*.jpeg)",
+      "Bash(cp \"/Users/the_kamma/Desktop/Repolar/Screenshots /Janne.jpg\" /Users/the_kamma/Desktop/RepolarProject/assets/expert-jokinen.jpg)",
+      "Bash(cp \"/Users/the_kamma/Desktop/Repolar/Screenshots /Arno.jpg\" /Users/the_kamma/Desktop/RepolarProject/assets/expert-sipponen.jpg)",
+      "Bash(ls /Users/the_kamma/Desktop/RepolarProject/assets/leg*)",
+      "Bash(mv \"Leg ulcer_Case 1.png\" leg-ulcer-case-1.png)",
+      "Bash(mv \"Leg ulcer_Case 2.png\" leg-ulcer-case-2.png)",
+      "Bash(mv \"Leg ulcer_Case 3.png\" leg-ulcer-case-3.png)",
+      "Bash(mv \"Surgical_Case 1.png\" surgical-case-1.png)",
+      "Bash(mv \"Surgical_Case 2.png\" surgical-case-2.png)",
+      "Bash(mv \"Surgical_Case 3.png\" surgical-case-3.png)",
+      "Bash(mv \"Surgical_Case 4.png\" surgical-case-4.png)",
+      "Bash(ls /Users/the_kamma/Desktop/RepolarProject/*.html)"
+    ]
+  }
+}

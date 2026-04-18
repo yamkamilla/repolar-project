@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abilar Vet — Evidence (Veterinary)</title>
+  <link rel="stylesheet" href="styles.css?v=2" />
+  <style>
+    /* Vet-page accent colour — slightly lighter tint on the accent bar
+       to visually distinguish from the human page while staying on-palette */
+    .study-card__accent {
+      background-color: var(--color-primary-light);
+    }
+    .study-card__number,
+    .study-card__number::before,
+    .study-card__finding,
+    .study-card__finding-label {
+      --color-primary: #4a5e4c; /* slightly lighter for vet */
+    }
+    .study-card__finding {
+      border-left-color: #4a5e4c;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <header class="site-header">
+      <a href="index.html" class="back-link" aria-label="Back to home">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M10 3 L5 8 L10 13"/>
+        </svg>
+        <span>Back</span>
+      </a>
+      <a href="index.html" class="site-logo">Abilar Vet</a>
+    </header>
+
+    <!-- Main -->
+    <main class="main-content">
+      <section class="evidence-section">
+
+        <!-- Section header -->
+        <div class="evidence-header">
+          <span class="evidence-eyebrow fade-in">Veterinary Studies</span>
+          <h1 class="evidence-title fade-in fade-in--delay-1">Evidence</h1>
+          <p class="evidence-desc fade-in fade-in--delay-2">
+            Veterinary studies demonstrating the wound-healing properties of
+            Abilar resin ointment in controlled animal models.
+          </p>
+        </div>
+
+        <!-- 1 × 2 Study grid (two wide cards, centred) -->
+        <div class="studies-grid studies-grid--two">
+
+          <!-- Study 1 — Piglet Wounds -->
+          <article class="study-card fade-in fade-in--delay-2">
+            <div class="study-card__accent"></div>
+            <div class="study-card__body">
+              <p class="study-card__number">Study 1</p>
+              <h2 class="study-card__title">Piglet Wounds</h2>
+              <span class="study-card__type">Controlled Veterinary Study</span>
+              <p class="study-card__desc">
+                A controlled veterinary study assessed Abilar efficacy in
+                standardized full-thickness dermal wounds created in
+                24&nbsp;piglets (<em>Sus scrofa</em>). The ointment was applied
+                every three days over a 21-day observation period alongside
+                untreated control wounds on the contralateral flank. Wound area,
+                re-epithelialization rate, and histological tissue architecture
+                were evaluated at days 7, 14, and 21.
+              </p>
+              <div class="study-card__finding">
+                <p class="study-card__finding-label">Key Finding</p>
+                <p class="study-card__finding-text">
+                  Re-epithelialization was 52% faster in Abilar-treated wounds
+                  vs. untreated controls; improved dermal collagen organization
+                  confirmed by histology at day 21.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Study 2 — Laser Wounds -->
+          <article class="study-card fade-in fade-in--delay-3">
+            <div class="study-card__accent"></div>
+            <div class="study-card__body">
+              <p class="study-card__number">Study 2</p>
+              <h2 class="study-card__title">Laser Wounds</h2>
+              <span class="study-card__type">Experimental Animal Model</span>
+              <p class="study-card__desc">
+                An experimental study using a standardized CO₂ laser-induced
+                wound model in 18 laboratory animals evaluated Abilar's
+                pro-healing mechanisms over a 28-day observation period.
+                Anti-inflammatory cytokine expression, antimicrobial activity,
+                and wound tensile strength were measured at days 7, 14, and 28.
+                Results were compared against both untreated wounds and a
+                standard-of-care ointment group.
+              </p>
+              <div class="study-card__finding">
+                <p class="study-card__finding-label">Key Finding</p>
+                <p class="study-card__finding-text">
+                  Collagen deposition increased by 65% and wound tensile
+                  strength improved by 48% vs. standard-care controls at
+                  day&nbsp;28.
+                </p>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /studies-grid -->
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>&copy; 2024 Abilar. All rights reserved.
+        &nbsp;·&nbsp;
+        <a href="https://abilar.com" target="_blank" rel="noopener">abilar.com</a>
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>

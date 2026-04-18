@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abilar — Leg Ulcer Evidence</title>
+  <link rel="stylesheet" href="styles.css?v=3" />
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <header class="site-header">
+      <a href="abilar.html" class="back-link" aria-label="Back to Evidence">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M10 3 L5 8 L10 13"/>
+        </svg>
+        <span>Back</span>
+      </a>
+      <a href="index.html" class="site-logo">Abilar</a>
+    </header>
+
+    <!-- Main -->
+    <main class="main-content">
+      <section class="detail-section">
+
+        <!-- Page header -->
+        <div class="detail-header fade-in">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="abilar.html">Evidence</a>
+            <span class="breadcrumb__sep" aria-hidden="true">›</span>
+            <span>Leg Ulcer</span>
+          </nav>
+          <h1 class="detail-title">Leg Ulcer</h1>
+          <p class="detail-subtitle">
+            Clinical evidence and case reports on the use of Abilar wound balm
+            in chronic venous leg ulcers.
+          </p>
+        </div>
+
+        <!-- Box 1: Clinical Study (flip card) -->
+        <div class="flip-card fade-in fade-in--delay-1" id="leg-clinical-flip">
+
+          <!-- Sizer: invisible clone of front content, gives wrapper real height -->
+          <div class="flip-card__sizer" aria-hidden="true">
+            <div class="clinical-card__header" style="padding:1.2rem 1.85rem;">
+              <h2 class="clinical-card__heading">Clinical Study</h2>
+            </div>
+            <div class="clinical-card__body">
+              <p class="clinical-card__desc">
+                A prospective 6-month study evaluated the healing rate of leg ulcers in
+                40 patients (35 with preoperative chronic ulcers and 5 with postoperative
+                Surgical Site Infections) following peripheral rearterialization — surgical
+                procedures to restore blood flow — for Critical Limb Ischaemia (CLI).
+                Participants were randomized to receive either Abilar 10% resin salve (n=20)
+                or medical honey salve (n=20) for at-home topical care. Healing was assessed
+                clinically or through linear regression analysis of progressive wound size
+                reduction during scheduled follow-up visits.
+              </p>
+              <div class="clinical-card__finding">
+                <p class="clinical-card__finding-label">Key Findings</p>
+                <p class="clinical-card__finding-text">
+                  In the "per protocol" analysis of patients with sufficient data, 77%
+                  (17 of 22) achieved treatment success, showing objective evidence of either
+                  complete healing or a significant trend toward healing. When excluding
+                  surgical site infections, 74% of preoperative chronic foot ulcers healed
+                  following revascularization and the use of the antiseptic salves. The mean
+                  observed healing time for clinically closed ulcers was 61&nbsp;±&nbsp;41 days.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <article class="clinical-card">
+
+            <!-- FRONT FACE -->
+            <div class="flip-card__face flip-card__face--front">
+              <div class="clinical-card__header" role="button" tabindex="0"
+                   aria-label="Flip card to see publication details"
+                   onclick="document.getElementById('leg-clinical-flip').classList.add('is-flipped')"
+                   onkeydown="if(event.key==='Enter'||event.key===' ')document.getElementById('leg-clinical-flip').classList.add('is-flipped')">
+                <h2 class="clinical-card__heading">Clinical Study</h2>
+                <!-- Flip icon hint -->
+                <svg class="flip-card__icon" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" aria-hidden="true">
+                  <path d="M17 1l4 4-4 4"/>
+                  <path d="M3 11V9a4 4 0 014-4h14"/>
+                  <path d="M7 23l-4-4 4-4"/>
+                  <path d="M21 13v2a4 4 0 01-4 4H3"/>
+                </svg>
+              </div>
+              <div class="clinical-card__body">
+                <p class="clinical-card__desc">
+                  A prospective 6-month study evaluated the healing rate of leg ulcers in
+                  40 patients (35 with preoperative chronic ulcers and 5 with postoperative
+                  Surgical Site Infections) following peripheral rearterialization — surgical
+                  procedures to restore blood flow — for Critical Limb Ischaemia (CLI).
+                  Participants were randomized to receive either Abilar 10% resin salve (n=20)
+                  or medical honey salve (n=20) for at-home topical care. Healing was assessed
+                  clinically or through linear regression analysis of progressive wound size
+                  reduction during scheduled follow-up visits.
+                </p>
+                <div class="clinical-card__finding">
+                  <p class="clinical-card__finding-label">Key Findings</p>
+                  <p class="clinical-card__finding-text">
+                    In the "per protocol" analysis of patients with sufficient data, 77%
+                    (17 of 22) achieved treatment success, showing objective evidence of either
+                    complete healing or a significant trend toward healing. When excluding
+                    surgical site infections, 74% of preoperative chronic foot ulcers healed
+                    following revascularization and the use of the antiseptic salves. The mean
+                    observed healing time for clinically closed ulcers was 61&nbsp;±&nbsp;41 days.
+                  </p>
+                </div>
+              </div>
+            </div><!-- /FRONT FACE -->
+
+            <!-- BACK FACE -->
+            <div class="flip-card__face flip-card__face--back">
+
+              <!-- Left: journal cover image -->
+              <div class="flip-back__image-col">
+                <img src="assets/leg_screenshot.png"
+                     alt="Journal article cover — Peripheral Rearterialization for Critical Limb Ischaemia and Antiseptic Resin or Honey Salve"
+                     loading="lazy" />
+              </div>
+
+              <!-- Right: download + reference -->
+              <div class="flip-back__info-col">
+
+                <!-- Download -->
+                <div>
+                  <p class="flip-back__ref-label">Download</p>
+                  <a class="flip-back__download-btn"
+                     href="assets/leg_pdf.pdf"
+                     download="Abilar_Leg_Ulcer_Clinical_Study.pdf"
+                     target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                         stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true">
+                      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                      <polyline points="7 10 12 15 17 10"/>
+                      <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Download PDF
+                  </a>
+                </div>
+
+                <!-- Reference -->
+                <div>
+                  <p class="flip-back__ref-label">Reference</p>
+                  <p class="flip-back__ref-text">
+                    Auvinen T, Haapakorva E, Sipponen A, Mäkinen K, Jokinen JJ.
+                    Peripheral Rearterialization for Critical Limb Ischaemia and Antiseptic
+                    Resin or Honey Salve in Postoperative Ulcer Care Results in Healing Rate
+                    Of Leg Ulcers in Three Quarters of Cases. A Prospective Clinical Follow-up
+                    of 35 Patients with Preoperative Chronic Ulcer and 5 Patients with
+                    Post-Surgery Wound (Surgical Site Infection).
+                    <em>Journal of Surgery.</em> 2020;5:1328.
+                    doi:10.29011/2575-9760.001328
+                  </p>
+                </div>
+
+                <!-- Flip back hint -->
+                <p class="flip-back__hint"
+                   role="button" tabindex="0"
+                   onclick="document.getElementById('leg-clinical-flip').classList.remove('is-flipped')"
+                   onkeydown="if(event.key==='Enter'||event.key===' ')document.getElementById('leg-clinical-flip').classList.remove('is-flipped')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                       aria-hidden="true">
+                    <path d="M15 18l-6-6 6-6"/>
+                  </svg>
+                  Back to study
+                </p>
+
+              </div>
+            </div><!-- /BACK FACE -->
+
+          </article>
+        </div><!-- /flip-card -->
+
+        <!-- Box 2: Case Studies -->
+        <article class="case-card fade-in fade-in--delay-2">
+          <div class="case-card__header">
+            <h2 class="case-card__heading">Case Studies</h2>
+          </div>
+          <div class="case-card__grid--four">
+
+            <!-- Case 1 -->
+            <div class="case-subbox">
+              <p class="case-subbox__num">Case 1</p>
+              <p class="case-subbox__text case-subbox__text--clamped">
+                Female 80 years old with severe rheumatoid arthritis and refractory venous leg ulcer
+                for several years. The ulcer was operated on twice and treated continually with various
+                topical wound care products without success. Abilar Wound Balm treatment was initiated
+                and salve was applied once a day. After 3 months, signs of small, epithelialized islets
+                can be seen. The ulcer was completely healed after 7 months of Abilar treatment.
+              </p>
+              <button class="case-text-toggle" onclick="toggleCaseText(this)">Show more</button>
+              <div class="case-img-wrapper" onclick="this.classList.toggle('revealed')" role="button" tabindex="0"
+                   onkeydown="if(event.key==='Enter'||event.key===' ')this.classList.toggle('revealed')"
+                   aria-label="Sensitive medical image — click to reveal">
+                <img class="case-subbox__img"
+                     src="assets/leg-ulcer-case-1.png"
+                     alt="Pressure ulcer before Abilar treatment, 3 months progress, and 7 months after complete healing"
+                     loading="lazy" />
+                <div class="case-img-warning" aria-hidden="true">
+                  <span class="case-img-warning__icon">⚠️</span>
+                  <span class="case-img-warning__title">Sensitive medical image</span>
+                  <span class="case-img-warning__hint">Click to view</span>
+                </div>
+              </div>
+              <p class="case-subbox__caption">Pressure ulcer before Abilar treatment, 3 months progress, and 7 months after complete healing.</p>
+              <div class="case-subbox__ref">
+                <span class="case-subbox__ref-label">Reference</span>
+                Non-public
+              </div>
+            </div>
+
+            <!-- Case 2 -->
+            <div class="case-subbox">
+              <p class="case-subbox__num">Case 2</p>
+              <p class="case-subbox__text case-subbox__text--clamped">
+                The 68-year-old woman has a history of varicose veins and severe coronary artery disease.
+                Risk factors are smoking and obesity. She presented with non-healing leg ulcers of mixed
+                venous and arterial origin almost a year ago. After percutaneous coronary intervention,
+                bilateral venous crossectomy, right femoral artery and popliteal 2nd segment
+                thrombendarterectomy, and femoropopliteal bypass surgery were performed. The leg wound
+                was rapidly drying up, covered with black necrosis, which, with the use of Abilar, was
+                detachable within one month; the necrosis and plaque were increasingly dissolving, and
+                granulation was starting.
+              </p>
+              <button class="case-text-toggle" onclick="toggleCaseText(this)">Show more</button>
+              <div class="case-img-wrapper" onclick="this.classList.toggle('revealed')" role="button" tabindex="0"
+                   onkeydown="if(event.key==='Enter'||event.key===' ')this.classList.toggle('revealed')"
+                   aria-label="Sensitive medical image — click to reveal">
+                <img class="case-subbox__img"
+                     src="assets/leg-ulcer-case-2.png"
+                     alt="Chronic mixed arterial and venous leg ulcers, and 1 month later"
+                     loading="lazy" />
+                <div class="case-img-warning" aria-hidden="true">
+                  <span class="case-img-warning__icon">⚠️</span>
+                  <span class="case-img-warning__title">Sensitive medical image</span>
+                  <span class="case-img-warning__hint">Click to view</span>
+                </div>
+              </div>
+              <p class="case-subbox__caption">Chronic mixed arterial and venous leg ulcers, and 1 month later.</p>
+              <div class="case-subbox__ref">
+                <span class="case-subbox__ref-label">Reference</span>
+                Tímea Hevér. Initial Experience with Norway Spruce (<em>Picea Abies</em>) Resin.
+                <em>Biomed J Sci &amp; Tech Res.</em> 2024;57(4).
+                doi:10.26717/BJSTR.2024.57.009043
+              </div>
+            </div>
+
+            <!-- Case 3 -->
+            <div class="case-subbox">
+              <p class="case-subbox__num">Case 3</p>
+              <p class="case-subbox__text case-subbox__text--clamped">
+                The 80-year-old patient developed a growing ulcer on his leg after a blow years ago
+                for an unknown reason. The wound was continuously covered with a biofilm layer, which
+                could not be broken down for three months, despite various dressings and treatment
+                methods. Abilar treatment started on the patient gradually broke down the biofilm and
+                within a month and a half the wound started to granulate.
+              </p>
+              <button class="case-text-toggle" onclick="toggleCaseText(this)">Show more</button>
+              <div class="case-img-wrapper" onclick="this.classList.toggle('revealed')" role="button" tabindex="0"
+                   onkeydown="if(event.key==='Enter'||event.key===' ')this.classList.toggle('revealed')"
+                   aria-label="Sensitive medical image — click to reveal">
+                <img class="case-subbox__img"
+                     src="assets/leg-ulcer-case-3.png"
+                     alt="Chronic ankle ulcer of unknown cause, and 1.5 months later"
+                     loading="lazy" />
+                <div class="case-img-warning" aria-hidden="true">
+                  <span class="case-img-warning__icon">⚠️</span>
+                  <span class="case-img-warning__title">Sensitive medical image</span>
+                  <span class="case-img-warning__hint">Click to view</span>
+                </div>
+              </div>
+              <p class="case-subbox__caption">Chronic ankle ulcer of unknown cause, and 1,5 months later.</p>
+              <div class="case-subbox__ref">
+                <span class="case-subbox__ref-label">Reference</span>
+                Tímea Hevér. Initial Experience with Norway Spruce (<em>Picea Abies</em>) Resin.
+                <em>Biomed J Sci &amp; Tech Res.</em> 2024;57(4).
+                doi:10.26717/BJSTR.2024.57.009043
+              </div>
+            </div>
+
+            <!-- Case 4 -->
+            <div class="case-subbox">
+              <p class="case-subbox__num">Case 4</p>
+              <p class="case-subbox__text case-subbox__text--clamped">
+                An 80-year-old female patient has a rapidly growing, extremely painful wound caused by
+                pyoderma gangrenosum. After two months of immunosuppressive treatment, a gradual
+                improvement started. Now, after two months of Abilar use, the wound bed has levelled
+                out and the wound edges have started to exfoliate spectacularly.
+              </p>
+              <button class="case-text-toggle" onclick="toggleCaseText(this)">Show more</button>
+              <div class="case-img-wrapper" onclick="this.classList.toggle('revealed')" role="button" tabindex="0"
+                   onkeydown="if(event.key==='Enter'||event.key===' ')this.classList.toggle('revealed')"
+                   aria-label="Sensitive medical image — click to reveal">
+                <img class="case-subbox__img"
+                     src="assets/leg-ulcer-case-4.png"
+                     alt="Painful atypical leg ulcer caused by pyoderma gangrenosum, and 2 months later"
+                     loading="lazy" />
+                <div class="case-img-warning" aria-hidden="true">
+                  <span class="case-img-warning__icon">⚠️</span>
+                  <span class="case-img-warning__title">Sensitive medical image</span>
+                  <span class="case-img-warning__hint">Click to view</span>
+                </div>
+              </div>
+              <p class="case-subbox__caption">Painful atypical leg ulcer caused by pyoderma gangrenosum, and 2 months later.</p>
+              <div class="case-subbox__ref">
+                <span class="case-subbox__ref-label">Reference</span>
+                Tímea Hevér. Initial Experience with Norway Spruce (<em>Picea Abies</em>) Resin.
+                <em>Biomed J Sci &amp; Tech Res.</em> 2024;57(4).
+                doi:10.26717/BJSTR.2024.57.009043
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>&copy; 2024 Abilar. All rights reserved.
+        &nbsp;·&nbsp;
+        <a href="https://abilar.com" target="_blank" rel="noopener">abilar.com</a>
+      </p>
+    </footer>
+
+  </div>
+  <script>
+    function toggleCaseText(btn) {
+      var text = btn.previousElementSibling;
+      var expanded = text.classList.toggle('is-expanded');
+      btn.textContent = expanded ? 'Show less' : 'Show more';
+    }
+  </script>
+</body>
+</html>

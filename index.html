@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abilar — Evidence-Based Wound Care</title>
-  <link rel="stylesheet" href="styles.css?v=10" />
+  <link rel="stylesheet" href="styles.css?v=16" />
 </head>
 <body>
   <div class="page-wrapper">
@@ -110,9 +110,162 @@
           </div>
         </div><!-- /expert-opinions-card -->
 
+        <!-- Customer Reviews (carousel) -->
+        <article class="expert-card reviews-card fade-in fade-in--delay-5" style="margin-top: 1.5rem;">
+          <div class="expert-card__header">
+            <h2 class="expert-card__heading">Customer Reviews</h2>
+          </div>
+
+          <div class="reviews-carousel" id="home-reviews">
+            <button type="button" class="reviews-carousel__arrow reviews-carousel__arrow--prev" aria-label="Previous review">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M15 18l-6-6 6-6"/>
+              </svg>
+            </button>
+            <button type="button" class="reviews-carousel__arrow reviews-carousel__arrow--next" aria-label="Next review">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 6l6 6-6 6"/>
+              </svg>
+            </button>
+            <div class="reviews-carousel__viewport">
+              <div class="reviews-carousel__track">
+
+                <div class="review-slide" data-index="0">
+                  <div class="review-card">
+                    <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p class="review-card__text">
+                      Amazing product. This is a miracle — it has treated decades-long skin
+                      problems in a way I never expected!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="review-slide" data-index="1">
+                  <div class="review-card">
+                    <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p class="review-card__text">
+                      Effective product. I burned my left hand quite badly and applied this
+                      ointment. It healed really quickly!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="review-slide" data-index="2">
+                  <div class="review-card">
+                    <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p class="review-card__text">
+                      Worked immediately. I had tried many different creams without success on
+                      chafing. With the spruce resin ointment, it healed in three days.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="review-slide" data-index="3">
+                  <div class="review-card">
+                    <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p class="review-card__text">
+                      Pure magic! My dog accidentally scratched my finger open with its tooth,
+                      so I went to first aid, etc. It was quite a deep wound that couldn't be
+                      stitched due to the high risk of infection from an animal bite — so I
+                      had a pretty deep gash in my index finger. Not ideal! The first few
+                      days were tough with the open wound, but once it started to calm down
+                      and I could switch to regular plasters from larger wound dressings, I
+                      started using Abilar. MAGIC! Within two days the wound had calmed down
+                      significantly, the redness was completely gone, and the pain had eased.
+                      Everyone should have this in their cabinet — I highly recommend it.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="review-slide" data-index="4">
+                  <div class="review-card">
+                    <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p class="review-card__text">
+                      Effective. The best product ever. Wounds heal quickly.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="review-slide" data-index="5">
+                  <div class="review-card">
+                    <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p class="review-card__text">
+                      Incredible resin! An infected wound healed and the skin regenerated
+                      quickly.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="review-slide" data-index="6">
+                  <div class="review-card">
+                    <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p class="review-card__text">
+                      Effective ointment. I was surprised by how well it works. I managed to
+                      heal a wound in a difficult location after just a few applications.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="reviews-carousel__dots" role="tablist" aria-label="Reviews navigation">
+              <button type="button" class="reviews-carousel__dot is-active" data-target="0" aria-label="Show review 1"></button>
+              <button type="button" class="reviews-carousel__dot" data-target="1" aria-label="Show review 2"></button>
+              <button type="button" class="reviews-carousel__dot" data-target="2" aria-label="Show review 3"></button>
+              <button type="button" class="reviews-carousel__dot" data-target="3" aria-label="Show review 4"></button>
+              <button type="button" class="reviews-carousel__dot" data-target="4" aria-label="Show review 5"></button>
+              <button type="button" class="reviews-carousel__dot" data-target="5" aria-label="Show review 6"></button>
+              <button type="button" class="reviews-carousel__dot" data-target="6" aria-label="Show review 7"></button>
+            </div>
+          </div>
+        </article>
+
       </section>
 
     </main>
+
+    <script>
+      (function () {
+        var root = document.getElementById('home-reviews');
+        if (!root) return;
+        var viewport = root.querySelector('.reviews-carousel__viewport');
+        var track = root.querySelector('.reviews-carousel__track');
+        var slides = root.querySelectorAll('.review-slide');
+        var dots = root.querySelectorAll('.reviews-carousel__dot');
+        var prev = root.querySelector('.reviews-carousel__arrow--prev');
+        var next = root.querySelector('.reviews-carousel__arrow--next');
+        var current = 0;
+
+        function sizeToSlide(i) {
+          if (!slides[i]) return;
+          viewport.style.height = slides[i].offsetHeight + 'px';
+        }
+
+        function goTo(i) {
+          if (i < 0) i = slides.length - 1;
+          if (i >= slides.length) i = 0;
+          current = i;
+          track.style.transform = 'translateX(-' + (i * 100) + '%)';
+          dots.forEach(function (d, idx) {
+            d.classList.toggle('is-active', idx === i);
+          });
+          sizeToSlide(i);
+        }
+
+        dots.forEach(function (d) {
+          d.addEventListener('click', function () {
+            goTo(parseInt(d.getAttribute('data-target'), 10));
+          });
+        });
+        if (prev) prev.addEventListener('click', function () { goTo(current - 1); });
+        if (next) next.addEventListener('click', function () { goTo(current + 1); });
+
+        window.addEventListener('load', function () { sizeToSlide(current); });
+        window.addEventListener('resize', function () { sizeToSlide(current); });
+        sizeToSlide(current);
+      })();
+    </script>
 
     <!-- Footer -->
     <footer class="site-footer">

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abilar — Burns Evidence</title>
+  <link rel="stylesheet" href="styles.css?v=10" />
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <header class="site-header">
+      <a href="abilar.html" class="back-link" aria-label="Back to Evidence">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M10 3 L5 8 L10 13"/>
+        </svg>
+        <span>Back</span>
+      </a>
+      <a href="index.html" class="site-logo">Abilar</a>
+    </header>
+
+    <!-- Main -->
+    <main class="main-content">
+      <section class="detail-section">
+
+        <!-- Page header -->
+        <div class="detail-header fade-in">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="abilar.html">Evidence</a>
+            <span class="breadcrumb__sep" aria-hidden="true">›</span>
+            <span>Burns</span>
+          </nav>
+          <h1 class="detail-title">Burns</h1>
+          <p class="detail-subtitle">
+            Clinical evidence and case reports on the use of Abilar wound balm
+            in burn wound management.
+          </p>
+        </div>
+
+        <!-- Box 1: Clinical Study (flip card) -->
+        <div class="flip-card fade-in fade-in--delay-1" id="clinical-flip">
+
+          <!-- Sizer -->
+          <div class="flip-card__sizer" aria-hidden="true">
+            <div class="clinical-card__header" style="padding:1.2rem 1.85rem;">
+              <h2 class="clinical-card__heading">Clinical Study</h2>
+            </div>
+            <div class="clinical-card__body">
+              <p class="clinical-card__desc">
+                A clinical evaluation used a case study research method to investigate the
+                application of polyhexanide (PHMB) and resin salve in 19 pediatric patients
+                (aged 5 months to 6 years) suffering from intermediate-thickness facial burns
+                caused by hot liquids. PHMB gel and liquid were used for moisturizing and
+                cleansing, while the spruce resin preparation was applied 2–3 times daily.
+                The study assessed wound healing progress and pain intensity using the FLACC
+                behavioural scale and the VAS visual-analogue scale on days 1, 2, 4, 6, 10,
+                and at discharge. The average duration of hospitalization was 11.2 days.
+              </p>
+              <div class="clinical-card__finding">
+                <p class="clinical-card__finding-label">Key Findings</p>
+                <p class="clinical-card__finding-text">
+                  Significant pain relief was achieved quickly, with a major reduction in
+                  intensity observed by the fourth day of treatment (mean FLACC/VAS score of
+                  2.3). By the sixth day, 73% of the children (11 of 15 assessed at that time
+                  point) reached a zero score on both pain scales. The use of resin salve
+                  maintained optimal wound moisture, which facilitated the correct course of
+                  keratinocyte proliferation, granulation, and re-epithelialization. The
+                  researchers concluded that this treatment protocol effectively aligns with
+                  the TIME strategy for wound management.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <article class="clinical-card">
+
+            <!-- FRONT FACE -->
+            <div class="flip-card__face flip-card__face--front">
+              <div class="clinical-card__header" role="button" tabindex="0"
+                   aria-label="Flip card to see publication details"
+                   onclick="document.getElementById('clinical-flip').classList.add('is-flipped')"
+                   onkeydown="if(event.key==='Enter'||event.key===' ')document.getElementById('clinical-flip').classList.add('is-flipped')">
+                <h2 class="clinical-card__heading">Clinical Study</h2>
+                <svg class="flip-card__icon" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" aria-hidden="true">
+                  <path d="M17 1l4 4-4 4"/>
+                  <path d="M3 11V9a4 4 0 014-4h14"/>
+                  <path d="M7 23l-4-4 4-4"/>
+                  <path d="M21 13v2a4 4 0 01-4 4H3"/>
+                </svg>
+              </div>
+              <div class="clinical-card__body">
+                <p class="clinical-card__desc">
+                  A clinical evaluation used a case study research method to investigate the
+                  application of polyhexanide (PHMB) and resin salve in 19 pediatric patients
+                  (aged 5 months to 6 years) suffering from intermediate-thickness facial burns
+                  caused by hot liquids. PHMB gel and liquid were used for moisturizing and
+                  cleansing, while the spruce resin preparation was applied 2–3 times daily.
+                  The study assessed wound healing progress and pain intensity using the FLACC
+                  behavioural scale and the VAS visual-analogue scale on days 1, 2, 4, 6, 10,
+                  and at discharge. The average duration of hospitalization was 11.2 days.
+                </p>
+                <div class="clinical-card__finding">
+                  <p class="clinical-card__finding-label">Key Findings</p>
+                  <p class="clinical-card__finding-text">
+                    Significant pain relief was achieved quickly, with a major reduction in
+                    intensity observed by the fourth day of treatment (mean FLACC/VAS score of
+                    2.3). By the sixth day, 73% of the children (11 of 15 assessed at that time
+                    point) reached a zero score on both pain scales. The use of resin salve
+                    maintained optimal wound moisture, which facilitated the correct course of
+                    keratinocyte proliferation, granulation, and re-epithelialization. The
+                    researchers concluded that this treatment protocol effectively aligns with
+                    the TIME strategy for wound management.
+                  </p>
+                </div>
+              </div>
+            </div><!-- /FRONT FACE -->
+
+            <!-- BACK FACE -->
+            <div class="flip-card__face flip-card__face--back">
+
+              <!-- Left: study cover image -->
+              <div class="flip-back__image-col">
+                <img src="assets/burns-study-cover.jpg"
+                     alt="Burns clinical study cover — Chirurgia Plastyczna i Oparzenia 2019"
+                     loading="lazy" />
+              </div>
+
+              <!-- Right: download + reference -->
+              <div class="flip-back__info-col">
+
+                <div>
+                  <p class="flip-back__ref-label">Download</p>
+                  <a class="flip-back__download-btn"
+                     href="assets/burns-clinical-study.pdf"
+                     download="Abilar_Burns_Clinical_Study.pdf"
+                     target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                         stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true">
+                      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                      <polyline points="7 10 12 15 17 10"/>
+                      <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Download PDF
+                  </a>
+                </div>
+
+                <div>
+                  <p class="flip-back__ref-label">Reference</p>
+                  <p class="flip-back__ref-text">
+                    Olszyna J. Zastosowanie poliheksanidu i żywiczych kwasów świerku
+                    norweskiego w oparzeniach pośredniej grubości skóry twarzy u dzieci.
+                    <em>Chirurgia Plastyczna i Oparzenia / Plastic Surgery &amp; Burns.</em>
+                    2019 Dec;7(4):175–9. doi:10.15374/CHPIO2019026
+                  </p>
+                </div>
+
+                <p class="flip-back__hint"
+                   role="button" tabindex="0"
+                   onclick="document.getElementById('clinical-flip').classList.remove('is-flipped')"
+                   onkeydown="if(event.key==='Enter'||event.key===' ')document.getElementById('clinical-flip').classList.remove('is-flipped')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                       aria-hidden="true">
+                    <path d="M15 18l-6-6 6-6"/>
+                  </svg>
+                  Back to study
+                </p>
+
+              </div>
+            </div><!-- /BACK FACE -->
+
+          </article>
+        </div><!-- /flip-card -->
+
+        <!-- Box 2: Case Studies -->
+        <article class="case-card fade-in fade-in--delay-2">
+          <div class="case-card__header">
+            <h2 class="case-card__heading">Case Studies</h2>
+          </div>
+          <div class="case-card__grid--four">
+
+            <!-- Case 1 -->
+            <div class="case-subbox">
+              <p class="case-subbox__num">Case 1</p>
+              <p class="case-subbox__text">
+                Female, 30 years old with a burn injury of the right thigh caused by spills
+                of hot cooking oil. Abilar treatment was initiated immediately, and salve was
+                applied once a day. Severe burn in thigh healed in 5 months without other
+                treatment. No infection was reported. Good re-epithelialization with low scar
+                and keloid formation. Side effects were not reported.
+              </p>
+              <div class="case-img-wrapper" onclick="this.classList.toggle('revealed')" role="button" tabindex="0"
+                   onkeydown="if(event.key==='Enter'||event.key===' ')this.classList.toggle('revealed')"
+                   aria-label="Sensitive medical image — click to reveal">
+                <img class="case-subbox__img"
+                     src="assets/Burn 1.png"
+                     alt="Severe burn injury before Abilar treatment, 2 months later and after Abilar treatment (5 months later)"
+                     loading="lazy" />
+                <div class="case-img-warning" aria-hidden="true">
+                  <span class="case-img-warning__icon">⚠️</span>
+                  <span class="case-img-warning__title">Sensitive medical image</span>
+                  <span class="case-img-warning__hint">Click to view</span>
+                </div>
+              </div>
+              <p class="case-subbox__caption">Severe burn injury before Abilar treatment, 2 months later and after Abilar treatment (5 months later).</p>
+              <div class="case-subbox__ref">
+                <span class="case-subbox__ref-label">Reference</span>
+                Non-public
+              </div>
+            </div>
+
+            <!-- Case 2 -->
+            <div class="case-subbox">
+              <p class="case-subbox__num">Case 2</p>
+              <p class="case-subbox__text">
+                Male, 70 years old with hypertension and atrial fibrillation. The patient
+                sustained a grade 2 burn injury of the right dominant hand caused by hot
+                boiling water. Local treatment with Abilar was initiated immediately, applied
+                once a day. Systemic antimicrobial therapy was not administered. After two
+                weeks of treatment, the burn injury was completely healed. No other treatment
+                was needed. No clinical or laboratory signs of infection or inflammation were
+                observed. Enhancement of epithelialization is clearly visible during treatment.
+              </p>
+              <div class="case-img-wrapper" onclick="this.classList.toggle('revealed')" role="button" tabindex="0"
+                   onkeydown="if(event.key==='Enter'||event.key===' ')this.classList.toggle('revealed')"
+                   aria-label="Sensitive medical image — click to reveal">
+                <img class="case-subbox__img"
+                     src="assets/Burn 2.png"
+                     alt="Burn injury before Abilar treatment and 2 weeks later"
+                     loading="lazy" />
+                <div class="case-img-warning" aria-hidden="true">
+                  <span class="case-img-warning__icon">⚠️</span>
+                  <span class="case-img-warning__title">Sensitive medical image</span>
+                  <span class="case-img-warning__hint">Click to view</span>
+                </div>
+              </div>
+              <p class="case-subbox__caption">Burn injury before Abilar treatment and 2 weeks later.</p>
+              <div class="case-subbox__ref">
+                <span class="case-subbox__ref-label">Reference</span>
+                Non-public
+              </div>
+            </div>
+
+            <!-- Case 3 -->
+            <div class="case-subbox">
+              <p class="case-subbox__num">Case 3</p>
+              <p class="case-subbox__text">
+                Female, 44 years old with a first-degree burn wound due to spilling of hot
+                oil. Abilar Wound Balm was used immediately, at least once a day according
+                to IFU instructions. No other product was used. Complete healing and no
+                scarring occurred after 20 days of treatment. No blister formation occurred.
+                No infection was present.
+              </p>
+              <div class="case-img-wrapper" onclick="this.classList.toggle('revealed')" role="button" tabindex="0"
+                   onkeydown="if(event.key==='Enter'||event.key===' ')this.classList.toggle('revealed')"
+                   aria-label="Sensitive medical image — click to reveal">
+                <img class="case-subbox__img"
+                     src="assets/Burn 3.png"
+                     alt="Burn wound before Abilar treatment and 20 days later"
+                     loading="lazy" />
+                <div class="case-img-warning" aria-hidden="true">
+                  <span class="case-img-warning__icon">⚠️</span>
+                  <span class="case-img-warning__title">Sensitive medical image</span>
+                  <span class="case-img-warning__hint">Click to view</span>
+                </div>
+              </div>
+              <p class="case-subbox__caption">Burn wound before Abilar treatment and 20 days later.</p>
+              <div class="case-subbox__ref">
+                <span class="case-subbox__ref-label">Reference</span>
+                Non-public
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>&copy; 2024 Abilar. All rights reserved.
+        &nbsp;·&nbsp;
+        <a href="https://abilar.com" target="_blank" rel="noopener">abilar.com</a>
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -4,23 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abilar Vet — Evidence (Veterinary)</title>
-  <link rel="stylesheet" href="styles.css?v=2" />
-  <style>
-    /* Vet-page accent colour — slightly lighter tint on the accent bar
-       to visually distinguish from the human page while staying on-palette */
-    .study-card__accent {
-      background-color: var(--color-primary-light);
-    }
-    .study-card__number,
-    .study-card__number::before,
-    .study-card__finding,
-    .study-card__finding-label {
-      --color-primary: #4a5e4c; /* slightly lighter for vet */
-    }
-    .study-card__finding {
-      border-left-color: #4a5e4c;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css?v=21" />
 </head>
 <body>
   <div class="page-wrapper">
@@ -34,83 +18,536 @@
         </svg>
         <span>Back</span>
       </a>
-      <a href="index.html" class="site-logo">Abilar Vet</a>
+      <a href="index.html" class="site-logo">Abilar</a>
     </header>
 
     <!-- Main -->
     <main class="main-content">
-      <section class="evidence-section">
+      <section class="detail-section">
 
-        <!-- Section header -->
-        <div class="evidence-header">
-          <span class="evidence-eyebrow fade-in">Veterinary Studies</span>
-          <h1 class="evidence-title fade-in fade-in--delay-1">Evidence</h1>
-          <p class="evidence-desc fade-in fade-in--delay-2">
+        <!-- Page header -->
+        <div class="detail-header fade-in">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb__sep" aria-hidden="true">›</span>
+            <span>Abilar Vet</span>
+          </nav>
+          <h1 class="detail-title">Abilar Vet</h1>
+          <p class="detail-subtitle">
             Veterinary studies demonstrating the wound-healing properties of
             Abilar resin ointment in controlled animal models.
           </p>
         </div>
 
-        <!-- 1 × 2 Study grid (two wide cards, centred) -->
-        <div class="studies-grid studies-grid--two">
+        <!-- ══ Study 1 — Piglet Wounds (flip card + infographic) ══ -->
+        <div class="study-unit fade-in fade-in--delay-1">
+        <div class="flip-card" id="vet-flip-1">
 
-          <!-- Study 1 — Piglet Wounds -->
-          <article class="study-card fade-in fade-in--delay-2">
-            <div class="study-card__accent"></div>
-            <div class="study-card__body">
-              <p class="study-card__number">Study 1</p>
-              <h2 class="study-card__title">Piglet Wounds</h2>
-              <span class="study-card__type">Controlled Veterinary Study</span>
-              <p class="study-card__desc">
-                A controlled veterinary study assessed Abilar efficacy in
-                standardized full-thickness dermal wounds created in
-                24&nbsp;piglets (<em>Sus scrofa</em>). The ointment was applied
-                every three days over a 21-day observation period alongside
-                untreated control wounds on the contralateral flank. Wound area,
-                re-epithelialization rate, and histological tissue architecture
-                were evaluated at days 7, 14, and 21.
+          <!-- Sizer -->
+          <div class="flip-card__sizer" aria-hidden="true">
+            <div class="clinical-card__header" style="padding:1.2rem 1.85rem;">
+              <h2 class="clinical-card__heading">Study 1 — Piglet Wounds</h2>
+            </div>
+            <div class="clinical-card__body">
+              <p class="clinical-card__desc">
+                A study involving 95 male piglets evaluated the efficacy of Norway spruce
+                ointments on castration wounds as a relevant model for human skin healing.
+                Participants were randomly assigned to five groups (n=19 per group): Abilar
+                10% resin salve, Vulpuran (20% spruce balm), pork lard (placebo), antibiotic
+                blue spray (positive control), or no treatment (negative control). Following
+                surgical castration at age 3 weeks, 0.5 mL of the assigned product was applied
+                topically to two scrotal incisions on days 1, 2, 3, 4, 5, 8, and 9.
+                Researchers used digital planimetry to analyse 647 photographs of the wounds
+                over 17 days, measuring area, closure rates, inflammatory markers
+                (haptoglobin), and microbiological status.
               </p>
-              <div class="study-card__finding">
-                <p class="study-card__finding-label">Key Finding</p>
-                <p class="study-card__finding-text">
-                  Re-epithelialization was 52% faster in Abilar-treated wounds
-                  vs. untreated controls; improved dermal collagen organization
-                  confirmed by histology at day 21.
+              <div class="clinical-card__finding">
+                <p class="clinical-card__finding-label">Key Findings</p>
+                <p class="clinical-card__finding-text">
+                  At the end of the study (days 15–17), the highest rates of completely closed
+                  wounds were observed in the Abilar (8.95%) and Vulpuran (6.84%) groups,
+                  compared to no treatment (6.32%), antibiotic spray (4.74%), and pork lard
+                  (3.16%). During the first 6 days, the spruce-treated groups also showed the
+                  smallest mean wound areas. Microbiological analysis on day 3 revealed that
+                  spruce-based treatments led to the lowest rates of fungal colonization
+                  (Abilar 77%, Vulpuran 70%) compared to the antibiotic spray (89%) and
+                  untreated controls (100%). Additionally, spruce balm treatment resulted in
+                  significantly lower wound secretion and contamination than no treatment, and
+                  significantly less swelling and reddening than the ointment base (lard) alone.
                 </p>
               </div>
             </div>
-          </article>
+          </div>
 
-          <!-- Study 2 — Laser Wounds -->
-          <article class="study-card fade-in fade-in--delay-3">
-            <div class="study-card__accent"></div>
-            <div class="study-card__body">
-              <p class="study-card__number">Study 2</p>
-              <h2 class="study-card__title">Laser Wounds</h2>
-              <span class="study-card__type">Experimental Animal Model</span>
-              <p class="study-card__desc">
-                An experimental study using a standardized CO₂ laser-induced
-                wound model in 18 laboratory animals evaluated Abilar's
-                pro-healing mechanisms over a 28-day observation period.
-                Anti-inflammatory cytokine expression, antimicrobial activity,
-                and wound tensile strength were measured at days 7, 14, and 28.
-                Results were compared against both untreated wounds and a
-                standard-of-care ointment group.
+          <article class="clinical-card">
+
+            <!-- FRONT -->
+            <div class="flip-card__face flip-card__face--front">
+              <div class="clinical-card__header" role="button" tabindex="0"
+                   aria-label="Flip card to see publication details"
+                   onclick="document.getElementById('vet-flip-1').classList.add('is-flipped')"
+                   onkeydown="if(event.key==='Enter'||event.key===' ')document.getElementById('vet-flip-1').classList.add('is-flipped')">
+                <h2 class="clinical-card__heading">Study 1 — Piglet Wounds</h2>
+                <svg class="flip-card__icon" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" aria-hidden="true">
+                  <path d="M17 1l4 4-4 4"/>
+                  <path d="M3 11V9a4 4 0 014-4h14"/>
+                  <path d="M7 23l-4-4 4-4"/>
+                  <path d="M21 13v2a4 4 0 01-4 4H3"/>
+                </svg>
+              </div>
+              <div class="clinical-card__body">
+                <p class="clinical-card__desc">
+                  A study involving 95 male piglets evaluated the efficacy of Norway spruce
+                  ointments on castration wounds as a relevant model for human skin healing.
+                  Participants were randomly assigned to five groups (n=19 per group): Abilar
+                  10% resin salve, Vulpuran (20% spruce balm), pork lard (placebo), antibiotic
+                  blue spray (positive control), or no treatment (negative control). Following
+                  surgical castration at age 3 weeks, 0.5 mL of the assigned product was
+                  applied topically to two scrotal incisions on days 1, 2, 3, 4, 5, 8, and 9.
+                  Researchers used digital planimetry to analyse 647 photographs of the wounds
+                  over 17 days, measuring area, closure rates, inflammatory markers
+                  (haptoglobin), and microbiological status.
+                </p>
+                <div class="clinical-card__finding">
+                  <p class="clinical-card__finding-label">Key Findings</p>
+                  <p class="clinical-card__finding-text">
+                    At the end of the study (days 15–17), the highest rates of completely
+                    closed wounds were observed in the Abilar (8.95%) and Vulpuran (6.84%)
+                    groups, compared to no treatment (6.32%), antibiotic spray (4.74%), and
+                    pork lard (3.16%). During the first 6 days, the spruce-treated groups
+                    also showed the smallest mean wound areas. Microbiological analysis on
+                    day 3 revealed that spruce-based treatments led to the lowest rates of
+                    fungal colonization (Abilar 77%, Vulpuran 70%) compared to the antibiotic
+                    spray (89%) and untreated controls (100%). Additionally, spruce balm
+                    treatment resulted in significantly lower wound secretion and contamination
+                    than no treatment, and significantly less swelling and reddening than the
+                    ointment base (lard) alone.
+                  </p>
+                </div>
+              </div>
+            </div><!-- /FRONT -->
+
+            <!-- BACK -->
+            <div class="flip-card__face flip-card__face--back">
+              <div class="flip-back__image-col">
+                <img src="assets/piglet-study-cover.jpg"
+                     alt="Piglet Wounds study cover — Planta Med 2022"
+                     loading="lazy" />
+              </div>
+              <div class="flip-back__info-col">
+                <div>
+                  <p class="flip-back__ref-label">Download</p>
+                  <a class="flip-back__download-btn"
+                     href="assets/Prokop_et_al_Abilar_Piglets_Beneficial_effect_of_resin_salve_in_treatment_of_severe_pressure_ulcers_a_prospective_random.pdf"
+                     download="Abilar_Vet_Piglet_Wounds_Study.pdf"
+                     target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                         stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true">
+                      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                      <polyline points="7 10 12 15 17 10"/>
+                      <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Download PDF
+                  </a>
+                </div>
+                <div>
+                  <p class="flip-back__ref-label">Reference</p>
+                  <p class="flip-back__ref-text">
+                    Prokop D, Spergser J, Hagmüller W, Tichy A, Zitterl-Eglseer K.
+                    Efficacy of Norway spruce ointments and bacterial and fungal alterations
+                    in the treatment of castration wounds in piglets.
+                    <em>Planta Med.</em> 2022 Mar 1;88(3–4):300–12.
+                    doi:10.1055/a-1646-2959
+                  </p>
+                </div>
+                <p class="flip-back__hint"
+                   role="button" tabindex="0"
+                   onclick="document.getElementById('vet-flip-1').classList.remove('is-flipped')"
+                   onkeydown="if(event.key==='Enter'||event.key===' ')document.getElementById('vet-flip-1').classList.remove('is-flipped')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                       aria-hidden="true">
+                    <path d="M15 18l-6-6 6-6"/>
+                  </svg>
+                  Back to study
+                </p>
+              </div>
+            </div><!-- /BACK -->
+
+          </article>
+        </div><!-- /vet-flip-1 -->
+
+        <!-- Piglet study infographic -->
+        <figure class="study-infographic" aria-label="Study 1 — Piglet Wounds infographic">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 464" role="img" aria-labelledby="piglet-info-title" font-family="'Poppins', 'Segoe UI', sans-serif">
+            <title id="piglet-info-title">Study 1 — Piglet Wounds: Abilar achieved 2× more completely closed wounds vs. antibiotic spray and 23% less fungal colonization.</title>
+            <defs>
+              <filter id="pig-shadow" x="-4%" y="-4%" width="108%" height="108%">
+                <feDropShadow dx="2" dy="2" stdDeviation="4" flood-color="#B0AA9E" flood-opacity="0.35"/>
+              </filter>
+            </defs>
+
+            <!-- Page background -->
+            <rect x="0" y="96" width="960" height="464" fill="#F5F3EE"/>
+
+            <!-- LEFT CARD — Hero stat -->
+            <rect x="35" y="111" width="388" height="420" rx="10" fill="#C8C4BC" opacity="0.4"/>
+            <rect x="32" y="108" width="388" height="420" rx="10" fill="#FFFFFF" filter="url(#pig-shadow)"/>
+            <rect x="32" y="108" width="5" height="420" rx="3" fill="#2C3D2A"/>
+
+            <text x="56" y="148" font-weight="700" font-size="10" fill="#9A9A8A" letter-spacing="1.5">WOUND CLOSURE RATE</text>
+            <text x="56" y="166" font-size="10" fill="#9A9A8A">at study end (days 15–17)</text>
+
+            <text x="54" y="330" font-family="'Lora','Georgia',serif" font-weight="700" font-size="148" fill="#2C3D2A">2×</text>
+
+            <text x="56" y="376" font-weight="700" font-size="16" fill="#1A1A1A">more completely closed wounds</text>
+            <text x="56" y="398" font-size="13" fill="#6B7280">vs. antibiotic blue spray</text>
+
+            <rect x="54" y="416" width="152" height="42" rx="6" fill="#2C3D2A"/>
+            <text x="130" y="442" text-anchor="middle" font-weight="700" font-size="11" fill="#FFFFFF">ABILAR  8.95%</text>
+
+            <rect x="216" y="416" width="184" height="42" rx="6" fill="#C8D4BE"/>
+            <text x="308" y="442" text-anchor="middle" font-weight="700" font-size="11" fill="#2C3D2A">ANTIBIOTIC  4.74%</text>
+
+            <!-- TOP-RIGHT CARD — Bar chart -->
+            <rect x="439" y="111" width="492" height="270" rx="10" fill="#C8C4BC" opacity="0.4"/>
+            <rect x="436" y="108" width="492" height="270" rx="10" fill="#FFFFFF" filter="url(#pig-shadow)"/>
+            <rect x="436" y="108" width="5" height="270" rx="3" fill="#2C3D2A"/>
+
+            <text x="458" y="140" font-weight="700" font-size="10" fill="#9A9A8A" letter-spacing="1.2">COMPLETE WOUND CLOSURE BY GROUP</text>
+
+            <!-- ROW 1 — Abilar 8.95% -->
+            <text x="562" y="167" text-anchor="end" font-weight="700" font-size="12" fill="#2C3D2A">Abilar</text>
+            <rect x="570" y="152" width="330" height="24" rx="4" fill="#EAE8E2"/>
+            <rect x="570" y="152" width="281" height="24" rx="4" fill="#2C3D2A"/>
+            <text x="858" y="169" font-weight="700" font-size="11" fill="#2C3D2A">8.95%</text>
+
+            <!-- ROW 2 — Vulpuran 6.84% -->
+            <text x="562" y="211" text-anchor="end" font-size="12" fill="#1A1A1A">Vulpuran</text>
+            <rect x="570" y="196" width="330" height="24" rx="4" fill="#EAE8E2"/>
+            <rect x="570" y="196" width="215" height="24" rx="4" fill="#8AB87A"/>
+            <text x="792" y="213" font-size="11" fill="#6B7280">6.84%</text>
+
+            <!-- ROW 3 — No treatment 6.32% -->
+            <text x="562" y="255" text-anchor="end" font-size="12" fill="#1A1A1A">No treatment</text>
+            <rect x="570" y="240" width="330" height="24" rx="4" fill="#EAE8E2"/>
+            <rect x="570" y="240" width="198" height="24" rx="4" fill="#B0B8A8"/>
+            <text x="775" y="257" font-size="11" fill="#6B7280">6.32%</text>
+
+            <!-- ROW 4 — Antibiotic spray 4.74% -->
+            <text x="562" y="299" text-anchor="end" font-size="12" fill="#1A1A1A">Antibiotic spray</text>
+            <rect x="570" y="284" width="330" height="24" rx="4" fill="#EAE8E2"/>
+            <rect x="570" y="284" width="149" height="24" rx="4" fill="#9BAAB0"/>
+            <text x="726" y="301" font-size="11" fill="#6B7280">4.74%</text>
+
+            <!-- ROW 5 — Lard 3.16% -->
+            <text x="562" y="343" text-anchor="end" font-size="12" fill="#1A1A1A">Lard</text>
+            <rect x="570" y="328" width="330" height="24" rx="4" fill="#EAE8E2"/>
+            <rect x="570" y="328" width="99" height="24" rx="4" fill="#C8C4BC"/>
+            <text x="676" y="345" font-size="11" fill="#6B7280">3.16%</text>
+
+            <!-- BOTTOM-RIGHT CARD — Antifungal -->
+            <rect x="439" y="395" width="492" height="136" rx="10" fill="#C8C4BC" opacity="0.4"/>
+            <rect x="436" y="392" width="492" height="136" rx="10" fill="#2C3D2A" filter="url(#pig-shadow)"/>
+
+            <circle cx="634" cy="490" r="4" fill="#5A8A4A"/>
+            <circle cx="682" cy="490" r="4" fill="#5A8A4A"/>
+            <circle cx="730" cy="490" r="4" fill="#5A8A4A"/>
+
+            <text x="682" y="422" text-anchor="middle" font-weight="700" font-size="10" fill="#88C070" letter-spacing="1.5">ANTIFUNGAL PROTECTION</text>
+            <text x="682" y="484" text-anchor="middle" font-family="'Lora','Georgia',serif" font-weight="700" font-size="58" fill="#FFFFFF">23%</text>
+            <text x="682" y="514" text-anchor="middle" font-size="11" fill="#A8C898">less fungal colonization vs. antibiotic spray</text>
+
+            <!-- FOOTNOTE -->
+            <text x="480" y="548" text-anchor="middle" font-size="9" fill="#9A9A8A">n = 95 male piglets · 5 treatment groups · 647 wounds analyzed · Source: Prokop et al., Planta Medica, 2021</text>
+          </svg>
+        </figure>
+        </div><!-- /study-unit -->
+
+        <!-- Section divider — dog / human-animal bond -->
+        <div class="section-divider fade-in" aria-hidden="true">
+          <img src="assets/dog-licking-man-face-human-animal-bond.webp"
+               alt="" loading="lazy" />
+        </div>
+
+        <!-- ══ Study 2 — Laser Wounds (flip card) ══ -->
+        <div class="flip-card fade-in fade-in--delay-2" id="vet-flip-2">
+
+          <!-- Sizer -->
+          <div class="flip-card__sizer" aria-hidden="true">
+            <div class="clinical-card__header" style="padding:1.2rem 1.85rem;">
+              <h2 class="clinical-card__heading">Study 2 — Laser Wounds</h2>
+            </div>
+            <div class="clinical-card__body">
+              <p class="clinical-card__desc">
+                A case study evaluated the healing speed and quality of standard surgical
+                wounds (following preventive ovariohysterectomy) in standardized healthy
+                medium-breed female dogs (5–20 kg, aged 3–5 years). The investigation
+                compared three postoperative care protocols: classical healing without
+                additional treatment (control), Abilar Vet 10% resin ointment, and
+                biostimulation laser therapy. Wound assessment was conducted at intervals
+                of 0, 1, 3, 7, 10, and 21 days. In the resin group, Abilar was applied
+                immediately after suturing and then every 12 to 24 hours until suture removal.
               </p>
-              <div class="study-card__finding">
-                <p class="study-card__finding-label">Key Finding</p>
-                <p class="study-card__finding-text">
-                  Collagen deposition increased by 65% and wound tensile
-                  strength improved by 48% vs. standard-care controls at
-                  day&nbsp;28.
+              <div class="clinical-card__finding">
+                <p class="clinical-card__finding-label">Key Findings</p>
+                <p class="clinical-card__finding-text">
+                  Wounds treated with Abilar achieved sufficient scar strength for suture
+                  removal by days 5–6, significantly faster than the standard healing group
+                  (days 7–9). While the laser group showed the earliest re-epithelialisation
+                  (48 hours), the Abilar group demonstrated a visible re-epithelialisation
+                  process from day 5 and allowed for the easiest stitch removal. The study
+                  concluded that Abilar effectively stimulates new cell formation and tissue
+                  regeneration, offering a cost-effective and easy-to-apply tool that
+                  significantly improves patient comfort and recovery speed.
                 </p>
               </div>
             </div>
-          </article>
+          </div>
 
-        </div><!-- /studies-grid -->
+          <article class="clinical-card">
+
+            <!-- FRONT -->
+            <div class="flip-card__face flip-card__face--front">
+              <div class="clinical-card__header" role="button" tabindex="0"
+                   aria-label="Flip card to see publication details"
+                   onclick="document.getElementById('vet-flip-2').classList.add('is-flipped')"
+                   onkeydown="if(event.key==='Enter'||event.key===' ')document.getElementById('vet-flip-2').classList.add('is-flipped')">
+                <h2 class="clinical-card__heading">Study 2 — Laser Wounds</h2>
+                <svg class="flip-card__icon" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" aria-hidden="true">
+                  <path d="M17 1l4 4-4 4"/>
+                  <path d="M3 11V9a4 4 0 014-4h14"/>
+                  <path d="M7 23l-4-4 4-4"/>
+                  <path d="M21 13v2a4 4 0 01-4 4H3"/>
+                </svg>
+              </div>
+              <div class="clinical-card__body">
+                <p class="clinical-card__desc">
+                  A case study evaluated the healing speed and quality of standard surgical
+                  wounds (following preventive ovariohysterectomy) in standardized healthy
+                  medium-breed female dogs (5–20 kg, aged 3–5 years). The investigation
+                  compared three postoperative care protocols: classical healing without
+                  additional treatment (control), Abilar Vet 10% resin ointment, and
+                  biostimulation laser therapy. Wound assessment was conducted at intervals
+                  of 0, 1, 3, 7, 10, and 21 days. In the resin group, Abilar was applied
+                  immediately after suturing and then every 12 to 24 hours until suture
+                  removal.
+                </p>
+                <div class="clinical-card__finding">
+                  <p class="clinical-card__finding-label">Key Findings</p>
+                  <p class="clinical-card__finding-text">
+                    Wounds treated with Abilar achieved sufficient scar strength for suture
+                    removal by days 5–6, significantly faster than the standard healing group
+                    (days 7–9). While the laser group showed the earliest re-epithelialisation
+                    (48 hours), the Abilar group demonstrated a visible re-epithelialisation
+                    process from day 5 and allowed for the easiest stitch removal (requiring
+                    very little traction vs. moderate force for the control group). The study
+                    concluded that Abilar effectively stimulates new cell formation and tissue
+                    regeneration, offering a cost-effective and easy-to-apply tool that
+                    significantly improves patient comfort and recovery speed compared to
+                    traditional surgical wound care.
+                  </p>
+                </div>
+              </div>
+            </div><!-- /FRONT -->
+
+            <!-- BACK -->
+            <div class="flip-card__face flip-card__face--back">
+              <div class="flip-back__image-col">
+                <img src="assets/laser-study-cover.jpg"
+                     alt="Laser Wounds study cover — Collection of Lectures 2024"
+                     loading="lazy" />
+              </div>
+              <div class="flip-back__info-col">
+                <div>
+                  <p class="flip-back__ref-label">Download</p>
+                  <a class="flip-back__download-btn"
+                     href="assets/Collection of lectures New options and procedures in wound treatment 2024.pdf"
+                     download="Abilar_Vet_Laser_Wounds_Study.pdf"
+                     target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                         stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true">
+                      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                      <polyline points="7 10 12 15 17 10"/>
+                      <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Download PDF
+                  </a>
+                </div>
+                <div>
+                  <p class="flip-back__ref-label">Reference</p>
+                  <p class="flip-back__ref-text">
+                    Zahrádek F. In: <em>New Options and Procedures in Wound Treatment —
+                    Collection of Lectures.</em> 2024.
+                  </p>
+                </div>
+                <p class="flip-back__hint"
+                   role="button" tabindex="0"
+                   onclick="document.getElementById('vet-flip-2').classList.remove('is-flipped')"
+                   onkeydown="if(event.key==='Enter'||event.key===' ')document.getElementById('vet-flip-2').classList.remove('is-flipped')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                       aria-hidden="true">
+                    <path d="M15 18l-6-6 6-6"/>
+                  </svg>
+                  Back to study
+                </p>
+              </div>
+            </div><!-- /BACK -->
+
+          </article>
+        </div><!-- /vet-flip-2 -->
+
+        <!-- Section divider — spruce resin close-up -->
+        <div class="section-divider fade-in" aria-hidden="true">
+          <img src="assets/spruce-resin-closeup-bubbles-wide.webp"
+               alt="" loading="lazy" />
+        </div>
+
+        <!-- ══ Customer Reviews (carousel) ══ -->
+        <article class="expert-card reviews-card fade-in fade-in--delay-3">
+          <div class="expert-card__header">
+            <h2 class="expert-card__heading">Customer Reviews</h2>
+          </div>
+
+          <div class="reviews-carousel" id="vet-reviews">
+            <button type="button" class="reviews-carousel__arrow reviews-carousel__arrow--prev" aria-label="Previous review">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M15 18l-6-6 6-6"/>
+              </svg>
+            </button>
+            <button type="button" class="reviews-carousel__arrow reviews-carousel__arrow--next" aria-label="Next review">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 6l6 6-6 6"/>
+              </svg>
+            </button>
+            <div class="reviews-carousel__viewport">
+              <div class="reviews-carousel__track">
+
+                <div class="review-slide" data-index="0">
+                  <div class="review-card">
+                    <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p class="review-card__text">
+                      Top product. My dog got a wound on its paw pad, and I treated it with
+                      this ointment. The entire wound was gone in four days. I definitely
+                      recommend it! Other minor scrapes have also healed quickly with this
+                      ointment.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="review-slide" data-index="1">
+                  <div class="review-card">
+                    <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p class="review-card__text">
+                      Absolutely a keeper. My dog's paw pad wound healed in a few weeks using
+                      only this ointment. No need for stitches. Plus points for the product
+                      being long-lasting.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="review-slide" data-index="2">
+                  <div class="review-card">
+                    <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p class="review-card__text">
+                      Great product. It has a mild and pleasant scent and really works. I have
+                      used it on bumps between my dog's toes caused by furunculosis, and it
+                      heals them effectively and quickly without irritating the dog at all.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="review-slide" data-index="3">
+                  <div class="review-card review-card--vet">
+                    <span class="review-card__mark">"</span>
+                    <p class="review-card__text">
+                      Almost all animals undergoing anal gland flushing receive AniLavo
+                      treatment rinse at the end; this significantly reduces the use of
+                      antibiotics.
+                    </p>
+                    <hr class="review-card__rule" />
+                    <span class="review-card__name">Veterinarian Pia Meldo</span>
+                    <span class="review-card__role">Lexavet veterinary clinic</span>
+                  </div>
+                </div>
+
+                <div class="review-slide" data-index="4">
+                  <div class="review-card review-card--vet">
+                    <span class="review-card__mark">"</span>
+                    <p class="review-card__text">
+                      Abilar Vet Wound Balm is a trusted product for minor wounds, and it is
+                      used weekly by both patients and staff.
+                    </p>
+                    <hr class="review-card__rule" />
+                    <span class="review-card__name">Veterinarian Pia Meldo</span>
+                    <span class="review-card__role">Lexavet veterinary clinic</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="reviews-carousel__dots" role="tablist" aria-label="Reviews navigation">
+              <button type="button" class="reviews-carousel__dot is-active" data-target="0" aria-label="Show review 1"></button>
+              <button type="button" class="reviews-carousel__dot" data-target="1" aria-label="Show review 2"></button>
+              <button type="button" class="reviews-carousel__dot" data-target="2" aria-label="Show review 3"></button>
+              <button type="button" class="reviews-carousel__dot" data-target="3" aria-label="Show review 4"></button>
+              <button type="button" class="reviews-carousel__dot" data-target="4" aria-label="Show review 5"></button>
+            </div>
+          </div>
+        </article>
+
       </section>
     </main>
+
+    <script>
+      (function () {
+        var root = document.getElementById('vet-reviews');
+        if (!root) return;
+        var viewport = root.querySelector('.reviews-carousel__viewport');
+        var track = root.querySelector('.reviews-carousel__track');
+        var slides = root.querySelectorAll('.review-slide');
+        var dots = root.querySelectorAll('.reviews-carousel__dot');
+        var prev = root.querySelector('.reviews-carousel__arrow--prev');
+        var next = root.querySelector('.reviews-carousel__arrow--next');
+        var current = 0;
+
+        function sizeToSlide(i) {
+          if (!slides[i]) return;
+          viewport.style.height = slides[i].offsetHeight + 'px';
+        }
+
+        function goTo(i) {
+          if (i < 0) i = slides.length - 1;
+          if (i >= slides.length) i = 0;
+          current = i;
+          track.style.transform = 'translateX(-' + (i * 100) + '%)';
+          dots.forEach(function (d, idx) {
+            d.classList.toggle('is-active', idx === i);
+          });
+          sizeToSlide(i);
+        }
+
+        dots.forEach(function (d) {
+          d.addEventListener('click', function () {
+            goTo(parseInt(d.getAttribute('data-target'), 10));
+          });
+        });
+        if (prev) prev.addEventListener('click', function () { goTo(current - 1); });
+        if (next) next.addEventListener('click', function () { goTo(current + 1); });
+
+        window.addEventListener('load', function () { sizeToSlide(current); });
+        window.addEventListener('resize', function () { sizeToSlide(current); });
+        sizeToSlide(current);
+      })();
+    </script>
 
     <!-- Footer -->
     <footer class="site-footer">
@@ -121,5 +558,31 @@
     </footer>
 
   </div>
+
+  <script>
+    // Scroll-triggered reveal for elements with .fade-in / .fade-in--delay-*
+    (function () {
+      var targets = document.querySelectorAll('[class*="fade-in"]');
+      if (!targets.length) return;
+
+      if (!('IntersectionObserver' in window)) {
+        // No IntersectionObserver support — let animations run as before
+        return;
+      }
+
+      targets.forEach(function (el) { el.classList.add('is-paused'); });
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('is-paused');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+      targets.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 </body>
 </html>

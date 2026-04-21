@@ -975,6 +975,8 @@ h1, h2, h3, h4 {
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  overflow: hidden;
+  border-radius: var(--radius-card);
 }
 
 /* Left column: journal cover image — wider so the page is readable */
@@ -982,6 +984,14 @@ h1, h2, h3, h4 {
   flex: 0 0 58%;
   overflow: hidden;
   border-right: 1px solid var(--color-border);
+}
+
+/* Icon-only variant (no cover image available) */
+.flip-back__image-col--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
 }
 
 .flip-back__image-col img {
@@ -1359,6 +1369,314 @@ h1, h2, h3, h4 {
 
   .expert-card__grid .quote-item:last-child {
     border-bottom: none;
+  }
+}
+
+/* ============================================================
+   SECTION DIVIDER — decorative image between content blocks
+   ============================================================ */
+
+.section-divider {
+  margin: 0.75rem 0;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  aspect-ratio: 5 / 2;
+  background: var(--color-primary);
+}
+
+.section-divider img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.section-divider::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.0) 40%, rgba(44,61,42,0.25) 100%);
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .section-divider {
+    margin: 0.5rem 0;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* Scroll-reveal: pause fade-in animations until element enters viewport */
+.fade-in.is-paused,
+.fade-in--delay-1.is-paused,
+.fade-in--delay-2.is-paused,
+.fade-in--delay-3.is-paused,
+.fade-in--delay-4.is-paused,
+.fade-in--delay-5.is-paused,
+.fade-in--delay-6.is-paused {
+  animation-play-state: paused;
+}
+
+/* ============================================================
+   STUDY INFOGRAPHIC (abilar-vet)
+   ============================================================ */
+
+.study-infographic {
+  margin: 2rem 0 0;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.study-infographic img,
+.study-infographic svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Study unit = flip card + infographic grouped as one study block. */
+.study-unit {
+  display: flex;
+  flex-direction: column;
+}
+
+.study-unit .flip-card {
+  margin-bottom: 0;
+}
+
+.study-unit .flip-card__sizer .clinical-card,
+.study-unit .flip-card .clinical-card,
+.study-unit .flip-card__face {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.study-unit .study-infographic {
+  margin: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+/* ============================================================
+   CUSTOMER REVIEWS CAROUSEL
+   ============================================================ */
+
+/* Reassert base card look — a later `.expert-card` rule (line ~2057)
+   redefines `.expert-card` for a smaller quote tile on index.html,
+   which wipes the background/padding/overflow needed here. */
+.reviews-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  padding: 0;
+  gap: 0;
+  text-align: left;
+  width: 50%;
+  align-self: center;
+}
+
+/* On detail pages the card's parent is a centered block container, not a
+   flex column with 50%-wide siblings. Fill the available width there. */
+.detail-section .reviews-card {
+  width: 100%;
+  max-width: 880px;
+}
+
+@media (max-width: 768px) {
+  .reviews-card {
+    width: 100%;
+  }
+}
+
+.reviews-carousel {
+  padding: 2.25rem 1.5rem 2rem;
+  background: var(--color-surface, #fafaf8);
+  position: relative;
+}
+
+.reviews-carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card, #fff);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 2;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.reviews-carousel__arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+.reviews-carousel__arrow:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.reviews-carousel__arrow--prev {
+  left: 0.4rem;
+}
+
+.reviews-carousel__arrow--next {
+  right: 0.4rem;
+}
+
+@media (max-width: 640px) {
+  .reviews-carousel__arrow {
+    width: 34px;
+    height: 34px;
+  }
+  .reviews-carousel__arrow svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.reviews-carousel__viewport {
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+
+.reviews-carousel__track {
+  display: flex;
+  align-items: flex-start;
+  transition: transform 0.5s ease, height 0.35s ease;
+  will-change: transform;
+}
+
+.review-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  padding: 0.75rem 0.5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+}
+
+.review-card {
+  background: var(--color-bg-card, #fff);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card, 12px);
+  box-shadow: var(--shadow-md);
+  padding: 1.6rem 1.5rem 1.55rem;
+  max-width: 560px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.detail-section .review-card {
+  padding: 2rem 2.25rem 2.1rem;
+  gap: 0.9rem;
+}
+
+.review-card__stars {
+  color: var(--color-text, #1c2320);
+  font-size: 1.1rem;
+  letter-spacing: 0.18em;
+  line-height: 1;
+}
+
+.review-card__mark {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 3.5rem;
+  line-height: 0.6;
+  color: var(--color-primary);
+  opacity: 0.25;
+  user-select: none;
+}
+
+.review-card__text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.review-card--vet .review-card__text {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.review-card__rule {
+  width: 2.25rem;
+  height: 2px;
+  background: var(--color-primary);
+  opacity: 0.4;
+  border: none;
+  margin: 0.35rem 0 0.25rem;
+}
+
+.review-card__name {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.review-card__role {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.reviews-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.reviews-carousel__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid var(--color-primary);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.reviews-carousel__dot:hover {
+  transform: scale(1.15);
+}
+
+.reviews-carousel__dot.is-active {
+  background: var(--color-primary);
+}
+
+@media (max-width: 640px) {
+  .reviews-carousel {
+    padding: 1.75rem 1rem 1.5rem;
+  }
+  .review-card {
+    padding: 1.6rem 1.4rem 1.55rem;
+  }
+  .review-card__text {
+    font-size: 0.9rem;
   }
 }
 

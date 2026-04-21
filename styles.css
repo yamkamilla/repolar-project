@@ -1915,6 +1915,16 @@ h1, h2, h3, h4 {
   .detail-section {
     padding: 3rem 1.25rem 4rem;
   }
+
+  /* Full-width on mobile for presence + expert cards */
+  .presence-card,
+  .expert-opinions-card {
+    width: 100%;
+  }
+
+  #abilar-map {
+    height: 240px;
+  }
 }
 
 /* ============================================================
@@ -2190,6 +2200,12 @@ h1, h2, h3, h4 {
   width: 50%;
 }
 
+@media (max-width: 768px) {
+  .expert-opinions-card {
+    width: 100%;
+  }
+}
+
 .expert-opinions-card__header {
   background: var(--color-primary);
   padding: 1rem 1.5rem;
@@ -2295,5 +2311,4 @@ h1, h2, h3, h4 {
   line-height: 1.6;
   text-align: center;
   padding: 1rem 0 0.5rem;
-}
 }
